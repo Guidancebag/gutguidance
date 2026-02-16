@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #faf9f7;
+  --color-foreground: #1a1a2e;
+  --color-primary: #2d6a4f;
+  --color-primary-light: #40916c;
+  --color-primary-dark: #1b4332;
+  --color-accent: #e9c46a;
+  --color-accent-dark: #d4a843;
+  --color-danger: #e63946;
+  --color-warning: #f4a261;
+  --color-success: #2a9d8f;
+  --color-surface: #ffffff;
+  --color-border: #e5e7eb;
+  --color-muted: #6b7280;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 40%, #40916c 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+@keyframes score-fill {
+  from { stroke-dashoffset: 283; }
+}
+
+.animate-score-fill {
+  animation: score-fill 1.5s ease-out forwards;
+}
